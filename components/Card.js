@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#F0F7F6',
     alignItems: 'center',
-    width: 300,
-    height: 330
-  }
+    width: '100%',
+    height: 330,
+    margin: 10
+  },
 })
