@@ -9,7 +9,7 @@ export default class CircularImage extends Component {
   render() {
     return(
         <Image 
-          source={require('../img/image.jpg')} style={styles.container}
+          source={this.props.myImage} style={styles.container}
         />
     );
   }

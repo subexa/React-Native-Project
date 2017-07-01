@@ -9,8 +9,8 @@ export default class Description extends Component {
   render() {
     return(
       <View style={styles.descriptionContainer}>
-        <Text style={[styles.name, styles.textColor]}>Subhechchha Joshi</Text>
-        <Text style={[styles.textColor, styles.job]}>Mobile Application Developer</Text>
+        <Text style={[styles.name, styles.textColor]}>{this.props.name}</Text>
+        <Text style={[styles.textColor, styles.job]}>{this.props.job}</Text>
       </View>
     );
   }

@@ -14,7 +14,7 @@ export default class Footer extends Component {
             Experience
           </Text>
           <Text>
-            1years
+            {this.props.experience}
           </Text>
         </View>
         <View>
@@ -22,7 +22,7 @@ export default class Footer extends Component {
             Rate
           </Text>
           <Text>
-            63%
+            {this.props.rate}
           </Text>
         </View>
         <View>
@@ -30,7 +30,7 @@ export default class Footer extends Component {
             Function
           </Text>
           <Text>
-            Director
+            {this.props.function}
           </Text>
         </View>
       </View>

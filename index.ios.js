@@ -9,40 +9,62 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
-import Description from './components/Description';
-import CircularImage from './components/CircularImage';
-import Footer from './components/Footer';
+
+import Card from './components/Card';
+import myImage from './img/image.jpg';
+
+const myData = [
+  {
+    name: 'Subhechchha Joshi',
+    job: 'Mobile Application Developer',
+    experience: '1 year',
+    rate: '$400',
+    function: 'Developer',
+    myImage: myImage
+  },
+  {
+    name: 'Aakash Sigdel',
+    job: 'Mobile Application Developer',
+    experience: '3 years',
+    rate: '$4000',
+    function: 'Developer',
+    myImage: myImage
+  },
+  {
+    name: 'blabla Joshi',
+    job: 'Mobile Application Developer',
+    experience: '1 year',
+    rate: '$400',
+    function: 'Developer',
+    myImage: myImage
+  }
+]
 
 export default class AwesomeProject extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <CircularImage />
-          <Description />
-          <Footer />
-        </View>
-      </View>
+      <ScrollView contentContainerstyle={styles.contentContainer}>
+        {myData.map( (item,index) =>
+          <Card key={index} myData={item} />
+        )}
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  contentContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#39455D',
   },
-  card: {
-    justifyContent: 'space-between',
-    backgroundColor: '#F0F7F6',
+
+  container: {
+    justifyContent: 'center',
     alignItems: 'center',
-    width: 300,
-    height: 330
-  }
+  },
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
